@@ -67,6 +67,18 @@ jobs:
         run: |
           aws eks update-kubeconfig --name fast-food-eks-cluster --region ${{ secrets.AWS_REGION }}
 
-      - name: Deploy to EKS
+      - name: Apply Kubernetes configurations
         run: |
-          kubectl set image deployment/fast-food-api fast-food=${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/${{ github.repository }}:${{ github.sha }}
+          kubectl apply -f k8s/config-map-postgres.yaml
+          kubectl apply -f k8s/hpa-fast-food-api.yaml
+          kubectl apply -f k8s/metrics.yaml
+          kubectl apply -f k8s/postgres-pv.yaml
+          kubectl apply -f k8s/postgres-pvc.yaml
+          kubectl apply -f k8s/pod-fast-food-api.yaml
+          kubectl apply -f k8s/pod-fast-food-banco.yaml
+          kubectl apply -f k8s/svc-fast-food-api.yaml
+          kubectl apply -f k8s/svc-fast-food-banco.yaml
+
+      - name: Update fast-food-api image
+        run: |
+          kubectl set image deployment/pod-fast-food-api backend-fast-food-api=${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/${{ github.repository }}:${{ github.sha }}
