@@ -21,4 +21,7 @@ spring:
 cors:
   url: http://localhost:3000
 
+logging:
+  level:
+    root: TRACE 
 
