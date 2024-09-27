@@ -23,5 +23,5 @@ cors:
 
 logging:
   level:
-    root: TRACE 
+    root: DEBUG 
 
