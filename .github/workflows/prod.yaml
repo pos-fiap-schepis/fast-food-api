@@ -72,12 +72,8 @@ jobs:
           kubectl apply -f k8s/config-map-postgres.yaml
           kubectl apply -f k8s/hpa-fast-food-api.yaml
           kubectl apply -f k8s/metrics.yaml
-          kubectl apply -f k8s/postgres-pv.yaml
-          kubectl apply -f k8s/postgres-pvc.yaml
           kubectl apply -f k8s/pod-fast-food-api.yaml
-          kubectl apply -f k8s/pod-fast-food-banco.yaml
           kubectl apply -f k8s/svc-fast-food-api.yaml
-          kubectl apply -f k8s/svc-fast-food-banco.yaml
 
       - name: Update fast-food-api image
         run: |
