@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: backend-fast-food-api
-          image: weillerschepis/fiap:8
+          image: 000097763985.dkr.ecr.us-east-1.amazonaws.com/pos-fiap-schepis/fast-food-api:3caa44d62743f1472f7cccc7db3788c754d83f81
           readinessProbe:
             failureThreshold: 3
             httpGet:
