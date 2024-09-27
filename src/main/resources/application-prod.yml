@@ -11,7 +11,7 @@ spring:
     show-sql: true
     open-in-view: false
     hibernate:
-      ddl-auto: create
+      ddl-auto: none
   flyway:
     schemas: fastfood
     url: jdbc:postgresql://${RDS_HOSTNAME}:${RDS_PORT}/fastfood?currentSchema=fastfood
