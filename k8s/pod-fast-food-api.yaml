@@ -43,6 +43,8 @@ spec:
               memory: "128Mi"
               cpu: "1024m"
           env:
+            - name: SPRING_PROFILES_ACTIVE
+              value: "prod"             
             - name: RDS_HOSTNAME
               value: postgres-db-fast-food.cyv49janaiin.us-east-1.rds.amazonaws.com
             - name: RDS_PORT
@@ -52,4 +54,4 @@ spec:
             - name: RDS_PASSWORD
               value: postgres
             - name: PROFILE
-              value: dev
+              value: prd
