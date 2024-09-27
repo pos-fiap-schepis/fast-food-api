@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: backend-fast-food-api
-          image: 000097763985.dkr.ecr.us-east-1.amazonaws.com/pos-fiap-schepis/fast-food-api:3caa44d62743f1472f7cccc7db3788c754d83f81
+          image: 566814225519.dkr.ecr.us-east-1.amazonaws.com/pos-fiap-schepis/fast-food-api:3caa44d62743f1472f7cccc7db3788c754d83f81
           readinessProbe:
             failureThreshold: 3
             httpGet:
@@ -46,7 +46,7 @@ spec:
             - name: SPRING_PROFILES_ACTIVE
               value: "prod"             
             - name: RDS_HOSTNAME
-              value: postgres-db-fast-food.cyv49janaiin.us-east-1.rds.amazonaws.com
+              value: postgres-db-fast-food.cenczrmq7efs.us-east-1.rds.amazonaws.com
             - name: RDS_PORT
               value: "5432"
             - name: RDS_USERNAME
