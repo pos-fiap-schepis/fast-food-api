@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: backend-fast-food-api
-          image: 566814225519.dkr.ecr.us-east-1.amazonaws.com/pos-fiap-schepis/fast-food-api:3caa44d62743f1472f7cccc7db3788c754d83f81
+          image: 566814225519.dkr.ecr.us-east-1.amazonaws.com/pos-fiap-schepis/fast-food-api:latest
           readinessProbe:
             failureThreshold: 3
             httpGet:
