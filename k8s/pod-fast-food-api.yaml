@@ -30,7 +30,7 @@ spec:
             - name: SPRING_PROFILES_ACTIVE
               value: "prod"             
             - name: RDS_HOSTNAME
-              value: postgres-db-fast-food.cenczrmq7efs.us-east-1.rds.amazonaws.com
+              value: postgres-db-fast-food.cykqqkvmro4m.us-east-1.rds.amazonaws.com
             - name: RDS_PORT
               value: "5432"
             - name: RDS_USERNAME
