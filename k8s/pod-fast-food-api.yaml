@@ -17,22 +17,6 @@ spec:
       containers:
         - name: backend-fast-food-api
           image: 566814225519.dkr.ecr.us-east-1.amazonaws.com/pos-fiap-schepis/fast-food-api:latest
-          readinessProbe:
-            failureThreshold: 3
-            httpGet:
-              path: /actuator/health/readiness
-              port: 8080
-            initialDelaySeconds: 60
-            periodSeconds: 10
-            timeoutSeconds: 5
-          livenessProbe:
-            failureThreshold: 3
-            httpGet:
-              path: /actuator/health/liveness
-              port: 8080
-            initialDelaySeconds: 120
-            periodSeconds: 10
-            timeoutSeconds: 5
           ports:
             - containerPort: 8080
           resources:
