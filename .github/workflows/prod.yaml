@@ -6,7 +6,7 @@ on:
 
 jobs:
   build:
-    name: Build and Push Docker Image to ECR
+    name: Build and Push Docker Image to ECR 2
     runs-on: ubuntu-latest
 
     steps:
