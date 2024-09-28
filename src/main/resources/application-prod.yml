@@ -2,7 +2,7 @@ spring:
   application:
     name: fast-food-api
   datasource:
-    url: jdbc:postgresql://${RDS_HOSTNAME}:${RDS_PORT}/fastfood?currentSchema=public
+    url: jdbc:postgresql://${RDS_HOSTNAME}:${RDS_PORT}/fastfood?currentSchema=fastfood
     username: ${RDS_USERNAME}
     password: ${RDS_PASSWORD}
 
@@ -13,8 +13,8 @@ spring:
     hibernate:
       ddl-auto: update
   flyway:
-    schemas: public
-    url: jdbc:postgresql://${RDS_HOSTNAME}:${RDS_PORT}/fastfood?currentSchema=public
+    schemas: fastfood
+    url: jdbc:postgresql://${RDS_HOSTNAME}:${RDS_PORT}/fastfood?currentSchema=fastfood
     user: ${RDS_USERNAME}
     password: ${RDS_PASSWORD}
 
