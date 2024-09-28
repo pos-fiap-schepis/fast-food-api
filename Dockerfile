@@ -1,5 +1,5 @@
-# Buildar a aplicação
-FROM maven:3.8-openjdk-17 AS builder
+# Build the application
+FROM maven:3.8-amazoncorretto-17 AS builder
 
 WORKDIR /app
 
@@ -7,12 +7,14 @@ COPY . /app
 
 RUN mvn clean install -DskipTests
 
-# Resposavel por realizar o deploy da aplicação 
-FROM openjdk:17
+# Deploy the application with required native libraries
+FROM amazoncorretto:17
 
 LABEL maintainer="Grupo 47"
 
 WORKDIR /app
+
+RUN yum update -y && yum install -y tomcat-native
 
 COPY --from=builder /app/target/fast-food-api-0.0.1-SNAPSHOT.jar /app/fast-food-api-0.0.1-SNAPSHOT.jar
 
