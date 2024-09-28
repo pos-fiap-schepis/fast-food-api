@@ -77,4 +77,4 @@ jobs:
 
       - name: Update fast-food-api image
         run: |
-          kubectl set image deployment/pod-fast-food-api backend-fast-food-api=${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/${{ github.repository }}:${{ github.sha }}
+          kubectl set image deployment/pod-fast-food-api backend-fast-food-api=${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/${{ github.repository }}:latest
