@@ -112,7 +112,7 @@ A collection se encontra na raiz do projeto, no arquivo chamado `fast-food-api.p
 ## Desenho de infraestrutura
 ![Desenho de infraestrutura](fast-food-api-k8s.drawio.png)
 
-### BANCO DE DADOS DOCUMENTAÇÃO
+### Banco de dados documentação
 
 O sistema utiliza o PostgreSQL como sistema de gerenciamento de banco de dados relacional. O esquema do banco de dados foi projetado para suportar as funcionalidades do sistema de pedidos, incluindo a criação de pedidos, o acompanhamento de pedidos e o pagamento online.
 
@@ -135,10 +135,25 @@ O banco de dados é composto pelas seguintes entidades principais:
 
 As migrações de banco de dados são gerenciadas usando o Flyway. Isso permite que o esquema do banco de dados seja facilmente evoluído ao longo do tempo.
 
+
 ### Diagrama de Entidade-Relacionamento
 
 Abaixo está o diagrama de entidade-relacionamento do banco de dados:
 
 ![Diagrama de Entidade-Relacionamento](modelo-entidade-relacionamento.png)
 
+### Justificativa para a escolha do banco de dados relacional
 
+A escolha de um banco de dados relacional, como o PostgreSQL usado neste projeto, pode ser justificada por várias razões:
+
+1. **Estrutura de dados bem definida**: Os bancos de dados relacionais permitem que você defina a estrutura dos seus dados de forma clara e precisa. Isso facilita a manutenção e a compreensão do esquema do banco de dados.
+
+2. **Integridade de dados**: Os bancos de dados relacionais oferecem recursos robustos para garantir a integridade dos dados, como chaves primárias, chaves estrangeiras e restrições de unicidade. Isso ajuda a evitar erros de dados e inconsistências.
+
+3. **Suporte a transações**: Os bancos de dados relacionais suportam transações, o que permite agrupar várias operações em uma única unidade de trabalho. Isso é crucial para garantir a consistência dos dados em operações complexas.
+
+4. **Suporte a consultas complexas**: A linguagem SQL, usada em bancos de dados relacionais, é poderosa e flexível, permitindo a realização de consultas complexas e a manipulação de grandes volumes de dados de maneira eficiente.
+
+5. **Maturidade e suporte da comunidade**: Bancos de dados relacionais como o PostgreSQL têm uma longa história de uso e uma grande comunidade de usuários. Isso significa que há muitos recursos disponíveis para ajudar a resolver problemas e melhorar o desempenho do banco de dados.
+
+No contexto deste projeto, um sistema de pedidos, um banco de dados relacional é uma escolha adequada devido à natureza estruturada dos dados (clientes, produtos, pedidos, pagamentos) e à necessidade de manter a integridade dos dados e suportar transações (por exemplo, ao criar um novo pedido).
