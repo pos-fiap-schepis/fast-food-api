@@ -14,8 +14,6 @@ CREATE SEQUENCE sq_produto
   START 1
   CACHE 1;
 
-COMMENT ON TABLE sq_produto IS 'Sequência usada para gerar IDs únicos para a tabela de produtos';
-
 COMMENT ON TABLE produto IS 'Tabela que armazena informações dos produtos';
 
 COMMENT ON COLUMN produto.id IS 'Identificador único para cada produto';
