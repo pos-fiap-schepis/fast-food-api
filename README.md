@@ -157,3 +157,4 @@ A escolha de um banco de dados relacional, como o PostgreSQL usado neste projeto
 5. **Maturidade e suporte da comunidade**: Bancos de dados relacionais como o PostgreSQL têm uma longa história de uso e uma grande comunidade de usuários. Isso significa que há muitos recursos disponíveis para ajudar a resolver problemas e melhorar o desempenho do banco de dados.
 
 No contexto deste projeto, um sistema de pedidos, um banco de dados relacional é uma escolha adequada devido à natureza estruturada dos dados (clientes, produtos, pedidos, pagamentos) e à necessidade de manter a integridade dos dados e suportar transações (por exemplo, ao criar um novo pedido).
+
