@@ -17,3 +17,17 @@ CREATE TABLE pedido (
     data_hora_entrega TIMESTAMP,
     CONSTRAINT fk_cliente FOREIGN KEY (cliente_id) REFERENCES cliente (id)
 );
+
+COMMENT ON TABLE sq_pedido IS 'Sequência usada para gerar IDs únicos para a tabela de pedidos';
+COMMENT ON TABLE pedido IS 'Tabela que armazena informações dos pedidos';
+
+COMMENT ON COLUMN pedido.id IS 'Identificador único para cada pedido';
+COMMENT ON COLUMN pedido.cliente_id IS 'Identificador do cliente que fez o pedido';
+COMMENT ON COLUMN pedido.valor IS 'Valor total do pedido';
+COMMENT ON COLUMN pedido.situacao_pagamento IS 'Situação do pagamento do pedido';
+COMMENT ON COLUMN pedido.status IS 'Status atual do pedido';
+COMMENT ON COLUMN pedido.data_hora_pagamento IS 'Data e hora do pagamento do pedido';
+COMMENT ON COLUMN pedido.data_hora_criacao IS 'Data e hora da criação do pedido';
+COMMENT ON COLUMN pedido.data_hora_entrega IS 'Data e hora da entrega do pedido';
+
+

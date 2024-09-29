@@ -111,3 +111,34 @@ A collection se encontra na raiz do projeto, no arquivo chamado `fast-food-api.p
 
 ## Desenho de infraestrutura
 ![Desenho de infraestrutura](fast-food-api-k8s.drawio.png)
+
+### BANCO DE DADOS DOCUMENTAÇÃO
+
+O sistema utiliza o PostgreSQL como sistema de gerenciamento de banco de dados relacional. O esquema do banco de dados foi projetado para suportar as funcionalidades do sistema de pedidos, incluindo a criação de pedidos, o acompanhamento de pedidos e o pagamento online.
+
+### Entidades
+
+O banco de dados é composto pelas seguintes entidades principais:
+
+- **Cliente**: Armazena as informações dos usuários que fazem pedidos no sistema.
+- **Produto**: Armazena as informações dos itens que podem ser adicionados aos pedidos.
+- **Pedido**: Armazena as informações dos pedidos feitos pelos clientes.
+- **Pagamento**: Armazena as informações dos pagamentos realizados pelos clientes.
+
+### Relacionamentos
+
+- Um **Cliente** pode fazer vários **Pedidos**.
+- Um **Pedido** pode conter vários **Produtos**.
+- Cada **Pedido** está associado a um **Pagamento**.
+
+### Migrações
+
+As migrações de banco de dados são gerenciadas usando o Flyway. Isso permite que o esquema do banco de dados seja facilmente evoluído ao longo do tempo.
+
+### Diagrama de Entidade-Relacionamento
+
+Abaixo está o diagrama de entidade-relacionamento do banco de dados:
+
+![Diagrama de Entidade-Relacionamento](modelo-entidade-relacionamento.png)
+
+

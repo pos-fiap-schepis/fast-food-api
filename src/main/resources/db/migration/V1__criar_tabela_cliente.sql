@@ -12,3 +12,14 @@ CREATE SEQUENCE sq_cliente
   MAXVALUE 9223372036854775807
   START 1
   CACHE 1;
+
+COMMENT ON TABLE sq_cliente IS 'Sequência usada para gerar IDs únicos para a tabela de clientes';
+
+COMMENT ON TABLE cliente IS 'Tabela que armazena informações dos clientes';
+COMMENT ON COLUMN cliente.id IS 'Identificador único para cada cliente';
+COMMENT ON COLUMN cliente.nome IS 'Nome do cliente';
+COMMENT ON COLUMN cliente.cpf IS 'CPF do cliente';
+COMMENT ON COLUMN cliente.email IS 'Email do cliente';
+COMMENT ON COLUMN cliente.data_inclusao IS 'Data de inclusão do cliente na tabela';
+
+
