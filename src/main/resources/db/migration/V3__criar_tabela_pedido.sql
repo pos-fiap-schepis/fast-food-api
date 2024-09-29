@@ -18,7 +18,6 @@ CREATE TABLE pedido (
     CONSTRAINT fk_cliente FOREIGN KEY (cliente_id) REFERENCES cliente (id)
 );
 
-COMMENT ON TABLE sq_pedido IS 'Sequência usada para gerar IDs únicos para a tabela de pedidos';
 COMMENT ON TABLE pedido IS 'Tabela que armazena informações dos pedidos';
 
 COMMENT ON COLUMN pedido.id IS 'Identificador único para cada pedido';

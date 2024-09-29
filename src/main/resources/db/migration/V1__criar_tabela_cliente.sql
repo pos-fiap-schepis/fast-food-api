@@ -13,8 +13,6 @@ CREATE SEQUENCE sq_cliente
   START 1
   CACHE 1;
 
-COMMENT ON TABLE sq_cliente IS 'Sequência usada para gerar IDs únicos para a tabela de clientes';
-
 COMMENT ON TABLE cliente IS 'Tabela que armazena informações dos clientes';
 COMMENT ON COLUMN cliente.id IS 'Identificador único para cada cliente';
 COMMENT ON COLUMN cliente.nome IS 'Nome do cliente';

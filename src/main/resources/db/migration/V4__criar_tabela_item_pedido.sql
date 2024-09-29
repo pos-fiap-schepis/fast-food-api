@@ -22,5 +22,3 @@ COMMENT ON COLUMN item_pedido.id_pedido IS 'Identificador do pedido ao qual o it
 COMMENT ON COLUMN item_pedido.quantidade IS 'Quantidade do produto no item do pedido';
 
 COMMENT ON TABLE item_pedido IS 'Tabela que armazena informações dos itens dos pedidos';
-
-COMMENT ON TABLE sq_item_pedido IS 'Sequência usada para gerar IDs únicos para a tabela de itens dos pedidos';
